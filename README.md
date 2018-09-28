@@ -2,8 +2,10 @@
 This is the Learning Managment System for our CS3321 Software Engineering Course
 
 # Team Members
-Kyle Vessey
-Brandon Popson
-Matt
-Hung
-Joshua
+<ul>
+  <li>Kyle Vessey</li>
+  <li>Brandon Popson</li>
+  <li>Matt</li>
+  <li>Hung</li>
+  <li>Joshua</li>
+</ul>
