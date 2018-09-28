@@ -9,6 +9,3 @@ This is the Learning Managment System for our CS3321 Software Engineering Course
   <li>Hung</li>
   <li>Joshua</li>
 </ul>
-
-# Team Model
-
