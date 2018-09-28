@@ -1,4 +1,4 @@
-# SoftwareEngineeringLMS
+# Software Engineering Learning Management System
 This is the Learning Managment System for our CS3321 Software Engineering Course
 
 # Team Members
@@ -9,3 +9,6 @@ This is the Learning Managment System for our CS3321 Software Engineering Course
   <li>Hung</li>
   <li>Joshua</li>
 </ul>
+
+# Team Model
+
