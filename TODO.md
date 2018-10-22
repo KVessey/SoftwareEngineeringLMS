@@ -1,5 +1,14 @@
 # Requirements
 - [ ] Build Requirements (*NEEDS EXPANDING*)
+- Student Requirements include:
+  - [ ] Student Name
+  - [ ] Student Id
+  - [ ] Registered Courses for Current Semester
+  - [ ] Exam score for each course
+  - [ ] GPA for individual course based on letter grade
+  - [ ] Combine GPA for entire semester
+
+- Administrator Requirements include:
 
 *NEEDS MORE ITEMS*
 
