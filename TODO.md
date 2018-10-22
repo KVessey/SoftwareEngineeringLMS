@@ -34,5 +34,6 @@
 
 # GUI
 - [ ] Create a mockup of what we might want things to look like
+  - Use QT for GUI (discussed in class), which automatically imports code for the buttons etc
 
 *NEEDS MORE ITEMS*
