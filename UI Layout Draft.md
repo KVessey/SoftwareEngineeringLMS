@@ -60,20 +60,27 @@ These objects all have the id attribute created by rails, so keep that in mind.
 - [ ] View Students
   - Shows a list of all students that have registered for one of the professors courses
     - SCREEN:
-    - [ ] Add Student – This will allow a professor to manually add a student to his course
+    - [ ] Add Student – This will allow the admin to manually add a student
       - Requires: all fields in student class
-    - [ ] Drop Student – This will allow a professor to drop a student from his course
+    - [ ] Drop Student – This will allow the admin to drop a student from his course
       - Use student Id to drop student
-    - [ ] Look up Student – This will allow professor to look up student by ID
+    - [ ] Look Up / Edit Student – This will allow the admin to look up student by ID and edit them
       - Input Id to search for student
-      - SUBMENU:
-        - Upon clicking look for student button, admin should  be prompted to input student Id
+
+### Submenu Under Look Up / Edit
+
+        - Upon clicking "Look Up Student" button, admin should  be prompted to input student Id
         - After inputing studentId, admin should see following items shown on screen regarding this student
           - Student ID
           - First Name
           - Middle Initial
           - Last Name
-          - Student overall GPA
+          - Student overall GPA for semester
+        - Now the admin should see a list of all of the courses this student is registered in
+          Screen will display list of each course with the following information:
+          - Course ID
+          - Course Name
+          - Student Grade
 
 ## STUDENT VIEW
 
