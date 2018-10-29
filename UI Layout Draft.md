@@ -48,7 +48,8 @@
       - Use student Id to drop student
     - [ ] Look Up / Edit Student – This will allow the admin to look up student by ID and edit them
       - Input Id to search for student
-      - <b>SUBMENU:</b>
+
+  ### Submenu Under Look Up / Edit
         - Upon clicking "Look Up Student" button, admin should  be prompted to input student Id
         - After inputing studentId, admin should see following items shown on screen regarding this student
           - Student ID
