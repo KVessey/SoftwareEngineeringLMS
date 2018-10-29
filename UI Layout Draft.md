@@ -31,11 +31,16 @@
 # ADMININSTRATOR VIEW </br>
 ### Landing Page
 - [ ]	View Courses
-  - Shows a list of all courses the admin is teaching
+  - Shows a list of all courses available in the system
+- [ ]	View Students
+  - Shows a list of all students
+  
+## View Courses Screen:
     - SCREEN:
     - [ ] Add Course – This will allow admin to add a course to teach to the roster
     - [ ] Drop Course – This will allow admin to remove a course and no longer offer
     - [ ] Look up Course by ID – This will allow user to search for class by Id
+## View Students Screen
 - [ ]	View Students
   - Shows a list of all students
     - SCREEN:
@@ -43,7 +48,7 @@
       - Requires: all fields in student class
     - [ ] Drop Student – This will allow the admin to drop a student from his course
       - Use student Id to drop student
-    - [ ] Look up Student – This will allow the admin to look up student by ID
+    - [ ] Look Up / Edit Student – This will allow the admin to look up student by ID and edit them
       - Input Id to search for student
       - <b>SUBMENU:</b>
         - Upon clicking "Look Up Student" button, admin should  be prompted to input student Id
@@ -63,3 +68,4 @@
 
 # STUDENT VIEW
 ### Landing Page
+
