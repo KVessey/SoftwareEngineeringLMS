@@ -52,7 +52,13 @@
           - First Name
           - Middle Initial
           - Last Name
-          - Student overall GPA
+          - Student overall GPA for semester
+          
+        - Now the admin should see a list of all of the courses this student is registered in
+          Screen will display list of each course with the following information:
+          - Course ID
+          - Course Name
+          - Student Grade
 
 
 # STUDENT VIEW
