@@ -41,8 +41,6 @@
     - [ ] Drop Course – This will allow admin to remove a course and no longer offer
     - [ ] Look up Course by ID – This will allow user to search for class by Id
 ## View Students Screen
-- [ ]	View Students
-  - Shows a list of all students
     - SCREEN:
     - [ ] Add Student – This will allow the admin to manually add a student
       - Requires: all fields in student class
