@@ -46,7 +46,7 @@ Has Many: exam
 |Attribute Name|Attribute Type|
 |--------------|--------------|
 |course_id     |integer       |
-|name          |string        |
+|exam_name     |string        |
 
 Belongs To: course
 
