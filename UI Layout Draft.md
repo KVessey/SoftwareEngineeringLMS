@@ -11,12 +11,20 @@ These objects all have the id attribute created by rails, so keep that in mind.
 |first_name    |string        |
 |last_name     |string        |
 
-### Administrator Object
+Has Many: enrollment
+Has Many: course Through: enrollment
+Has Many: exam Through: course
+
+### Enrollment Object
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
-|first_name    |string        |
-|last_name     |string        |
+|course_id     |integer       |
+|semester      |string        |
+|student_id    |integer       |
+
+Belongs To: student
+Has Many: course
 
 ### Course Object
 
@@ -24,12 +32,19 @@ These objects all have the id attribute created by rails, so keep that in mind.
 |--------------|--------------|
 |course_name   |string        |
 
+Belongs To: enrollment
+Has Many: student Through: enrollment
+Has Many: exam
+
 ### Exam Object
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
 |course_id     |integer       |
 |name          |string        |
+
+Belongs To: course
+Has Many: grade
 
 ### Grade Object
 
@@ -39,13 +54,14 @@ These objects all have the id attribute created by rails, so keep that in mind.
 |student_id    |integer       |
 |grade         |integer       |
 
-### Enrollment Object
+Belongs To: exam
+
+### Administrator Object
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
-|course_id     |integer       |
-|semester      |string        |
-|student_id    |integer       |
+|first_name    |string        |
+|last_name     |string        |
 
 ## ADMINISTRATOR VIEW
 
