@@ -12,7 +12,9 @@ These objects all have the id attribute created by rails, so keep that in mind.
 |last_name     |string        |
 
 Has Many: enrollment
+
 Has Many: course Through: enrollment
+
 Has Many: exam Through: course
 
 ### Enrollment Object
@@ -24,6 +26,7 @@ Has Many: exam Through: course
 |student_id    |integer       |
 
 Belongs To: student
+
 Has Many: course
 
 ### Course Object
@@ -33,7 +36,9 @@ Has Many: course
 |course_name   |string        |
 
 Belongs To: enrollment
+
 Has Many: student Through: enrollment
+
 Has Many: exam
 
 ### Exam Object
@@ -44,6 +49,7 @@ Has Many: exam
 |name          |string        |
 
 Belongs To: course
+
 Has Many: grade
 
 ### Grade Object
