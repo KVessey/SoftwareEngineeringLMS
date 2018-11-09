@@ -1,4 +1,7 @@
-# Requirements
+# TODO Items
+
+## Requirements
+
 - Student Requirements include:
   - [ ] Student Name
   - [ ] Student Id
@@ -18,21 +21,23 @@
   - [ ] View of students grades and GPA
   - [ ] Ability to drop student from course
   
+## Design and Reporting
 
-# Design and Reporting
-- [ ] Analyze the software and create a plan. (Use the analysis strategies from the lectures)
-- [ ] Create a 2D Life Cycle model
-- [ ] Select a team model to describe our team (e.g. Classical Chief, Modern Chief, Democratic, etc.)
-- [x] Setup Version Control for the project
-- [ ] Draw out UML diagrams to show the relationships between the objects
-- [ ] Create an SPMP (Software Project Management Plan)
+- [ ] Analyze the software and create a plan. (Use the analysis strategies from the lectures) (Kyle?)
+- [ ] Create a 2D Life Cycle model (Josh)
+- [ ] Select a team model to describe our team (e.g. Classical Chief, Modern Chief, Democratic, etc.) (Josh)
+- [x] Setup Version Control for the project (Kyle)
+- [ ] Draw out UML diagrams to show the relationships between the objects (Charlie)
+- [ ] Create an SPMP (Software Project Management Plan) (Kyle)
 
-# Data Records
-- [ ] Research appropriate data store (e.g. txt file, Postgres, MongoDB, etc)
+## Data Records
+
+- [x] Research appropriate data store (e.g. txt file, Postgres, MongoDB, etc)
 
 *NEEDS MORE ITEMS*
 
-# GUI
+## GUI
+
 - [ ] Create a mockup of what we might want things to look like
   - Use QT for GUI (discussed in class), which automatically imports code for the buttons etc
 
