@@ -15,8 +15,8 @@
   <tbody>
     <% @grades.each do |grade| %>
       <tr>
-        <td><%= grade.exam_id %></td>
-        <td><%= grade.student_id %></td>
+        <td><%= grade.exam_name %></td>
+        <td><%= "#{grade.first_name} #{grade.last_name}" %></td>
         <td><%= grade.grade %></td>
         <td><%= link_to 'Show', grade %></td>
         <td><%= link_to 'Edit', edit_grade_path(grade) %></td>

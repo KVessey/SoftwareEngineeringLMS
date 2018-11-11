@@ -4,7 +4,7 @@ class GradesController < ApplicationController
   # GET /grades
   # GET /grades.json
   def index
-    @grades = Grade.all
+    @grades = Grade.joins(:student, :exam).select('grades.id, grades.exam_id, exams.exam_name, grades.student_id, students.first_name, students.last_name, grades.grade')
   end
 
   # GET /grades/1

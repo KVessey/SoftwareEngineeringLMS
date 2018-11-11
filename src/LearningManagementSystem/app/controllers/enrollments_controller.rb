@@ -4,7 +4,7 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments
   # GET /enrollments.json
   def index
-    @enrollments = Enrollment.all
+    @enrollments = Enrollment.joins(:course, :student).select('enrollments.id, enrollments.semester, students.first_name, students.last_name, courses.course_name')
   end
 
   # GET /enrollments/1
