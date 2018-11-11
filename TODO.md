@@ -3,8 +3,8 @@
 ## Requirements
 
 - Student Requirements include:
-  - [ ] Student Name
-  - [ ] Student Id
+  - [x] Student Name
+  - [x] Student Id
   - [ ] Ability to register for a course
   - [ ] View Registered Courses for Current Semester
   - [ ] Ability to drop from a course
@@ -23,10 +23,11 @@
   
 ## Design and Reporting
 
-- [ ] Analyze the software and create a plan. (Use the analysis strategies from the lectures) (Kyle?)
-- [ ] Create a 2D Life Cycle model (Josh)
-- [ ] Select a team model to describe our team (e.g. Classical Chief, Modern Chief, Democratic, etc.) (Josh)
+- [ ] Analyze the software and create a plan. (Use the analysis strategies from the lectures) (Josh)
+- [ ] Create a 2D Life Cycle model (Charlie)
+- [ ] Select a team model to describe our team (e.g. Classical Chief, Modern Chief, Democratic, etc.) (Matt)
 - [x] Setup Version Control for the project (Kyle)
+- [ ] Create list of neccessary UML diagrams (Josh)
 - [ ] Draw out UML diagrams to show the relationships between the objects (Charlie)
 - [ ] Create an SPMP (Software Project Management Plan) (Kyle)
 
