@@ -15,8 +15,8 @@
   <tbody>
     <% @enrollments.each do |enrollment| %>
       <tr>
-        <td><%= enrollment.first_name %></td>
-        <td><%= enrollment.last_name %></td>
+        
+        <td><%= enrollment.id %></td>
         <td><%= enrollment.semester %></td>
         <td><%= link_to 'Show', enrollment %></td>
         <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>

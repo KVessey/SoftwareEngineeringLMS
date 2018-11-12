@@ -1,7 +1,7 @@
 class Student < ApplicationRecord
-    has_many :enrollment
-    has_many :course, :through => :enrollment
-    has_many :exam, :through => :course
+    has_many :enrollments
+    has_many :courses, :through => :enrollments
+    has_many :exams, :through => :courses
 
     validates_length_of :first_name, :within => 1..20
     validates_length_of :last_name, :within => 1..20

@@ -10,5 +10,25 @@
   <%= @student.last_name %>
 </p>
 
+<strong>Enrollments:</strong>
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Course Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student.enrollments.each do |enrollment| %>
+      <tr>
+        <td><%= enrollment.semester %></td>
+        <td>COURSE NAME HERE</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
