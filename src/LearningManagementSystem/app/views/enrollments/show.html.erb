@@ -2,7 +2,7 @@
 
 <p>
   <strong>Student:</strong>
-  <%= @enrollment.student_id %>
+  <%= @enrollment.student.full_name %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @enrollment.course_id %>
+  <%= @enrollment.course.course_name %>
 </p>
 
 <%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
