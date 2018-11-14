@@ -27,7 +27,7 @@ Has Many: exam Through: course
 
 Belongs To: student
 
-Has Many: course
+Belongs To: course
 
 ### Course Object
 
