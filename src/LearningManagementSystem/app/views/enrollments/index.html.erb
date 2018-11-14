@@ -8,6 +8,7 @@
       <th>Student First Name</th>
       <th>Student Last Name</th>
       <th>Semester</th>
+      <th>Course Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +16,10 @@
   <tbody>
     <% @enrollments.each do |enrollment| %>
       <tr>
-        
-        <td><%= enrollment.id %></td>
+        <td><%= enrollment.student.first_name %></td>
+        <td><%= enrollment.student.last_name %></td>
         <td><%= enrollment.semester %></td>
+        <td><%= enrollment.course.course_name %></td>
         <td><%= link_to 'Show', enrollment %></td>
         <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
         <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

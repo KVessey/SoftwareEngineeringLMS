@@ -4,7 +4,7 @@ class ExamsController < ApplicationController
   # GET /exams
   # GET /exams.json
   def index
-    @exams = Exam.all
+    @exams = Exam.joins(:course).select('exams.id, exams.course_id, exams.exam_name, courses.course_name')
   end
 
   # GET /exams/1

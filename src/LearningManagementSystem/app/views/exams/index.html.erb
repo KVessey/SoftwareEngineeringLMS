@@ -14,7 +14,7 @@
   <tbody>
     <% @exams.each do |exam| %>
       <tr>
-        <td><%= exam.course_id %></td>
+        <td><%= exam.course.course_name %></td>
         <td><%= exam.exam_name %></td>
         <td><%= link_to 'Show', exam %></td>
         <td><%= link_to 'Edit', edit_exam_path(exam) %></td>

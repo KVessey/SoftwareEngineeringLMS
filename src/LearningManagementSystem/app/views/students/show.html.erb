@@ -24,7 +24,7 @@
     <% @student.enrollments.each do |enrollment| %>
       <tr>
         <td><%= enrollment.semester %></td>
-        <td>COURSE NAME HERE</td>
+        <td><%= enrollment.course.course_name %></td>
       </tr>
     <% end %>
   </tbody>
