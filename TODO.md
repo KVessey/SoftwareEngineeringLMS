@@ -24,11 +24,11 @@
 ## Design and Reporting
 
 - [ ] Analyze the software and create a plan. (Use the analysis strategies from the lectures) (Josh)
-- [ ] Create a 2D Life Cycle model (Charlie)
+- [x] Create a 2D Life Cycle model (Charlie)
 - [ ] Select a team model to describe our team (e.g. Classical Chief, Modern Chief, Democratic, etc.) (Matt)
 - [x] Setup Version Control for the project (Kyle)
 - [ ] Create list of neccessary UML diagrams (Josh)
-- [ ] Draw out UML diagrams to show the relationships between the objects (Charlie)
+- [x] Draw out UML diagrams to show the relationships between the objects (Charlie)
 - [ ] Create an SPMP (Software Project Management Plan) (Kyle)
 
 ## Data Records
