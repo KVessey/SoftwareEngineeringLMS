@@ -4,7 +4,12 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments
   # GET /enrollments.json
   def index
-    @enrollments = Enrollment.joins(:course, :student).select('enrollments.id, enrollments.semester, enrollments.course_id, courses.course_name, students.first_name, students.last_name, enrollments.student_id').reorder('last_name DESC')
+    @enrollments = Enrollment.joins(:course, :student).select('enrollments.id, enrollments.semester, enrollments.course_id, courses.course_name, students.first_name, students.last_name, enrollments.student_id').reorder('last_name ASC')
+    if (params.has_key?(:semester))
+      if (params[:semester] != 'all')
+        @enrollments = @enrollments.where(semester: params[:semester])
+      end
+    end
   end
 
   # GET /enrollments/1

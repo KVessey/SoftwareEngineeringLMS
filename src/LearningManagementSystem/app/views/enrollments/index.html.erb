@@ -15,9 +15,23 @@
   <tbody>
     <% @enrollments.each do |enrollment| %>
       <tr>
-        <td><%= enrollment.student.full_name %></td>
-        <td><%= enrollment.semester %></td>
-        <td><%= enrollment.course.course_name %></td>
+        <td><%= link_to(
+          enrollment.student.full_name, 
+          controller: 'students',
+          action: 'show', 
+          id: enrollment.student_id
+          ) %></td>
+        <td><%= link_to(
+          enrollment.semester, 
+          controller: 'enrollments',
+          semester: enrollment.semester
+          ) %></td>
+        <td><%= link_to(
+          enrollment.course.course_name, 
+          controller: 'courses',
+          action: 'show', 
+          id: enrollment.course_id
+          ) %></td>
         <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
         <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
