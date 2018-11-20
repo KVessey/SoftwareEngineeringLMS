@@ -10,49 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_04_193750) do
+ActiveRecord::Schema.define(version: 2018_11_20_031736) do
 
   create_table "administrators", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "course_name"
+    t.string "course_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "enrollments", force: :cascade do |t|
-    t.integer "student_id"
-    t.string "semester"
-    t.integer "course_id"
+    t.integer "student_id", null: false
+    t.string "semester", null: false
+    t.integer "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "exams", force: :cascade do |t|
-    t.integer "course_id"
-    t.string "exam_name"
+    t.integer "course_id", null: false
+    t.string "exam_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "grades", force: :cascade do |t|
-    t.integer "exam_id"
-    t.integer "student_id"
-    t.integer "grade"
+    t.integer "exam_id", null: false
+    t.integer "student_id", null: false
+    t.integer "grade", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "password_digest"
+    t.index ["username"], name: "index_students_on_username", unique: true
   end
 
 end
