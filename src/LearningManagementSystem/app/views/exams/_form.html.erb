@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :course_id %>
-    <%= form.number_field :course_id %>
+    <%= collection_select(:exam, :course_id, Course.all, :id, :course_name) %>
   </div>
 
   <div class="field">
