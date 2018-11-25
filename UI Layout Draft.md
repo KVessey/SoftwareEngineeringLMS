@@ -71,11 +71,13 @@ Belongs To: exam
 
 ### Administrator Object
 
-|Attribute Name|Attribute Type|
-|--------------|--------------|
-|id            |integer       |
-|first_name    |string        |
-|last_name     |string        |
+|Attribute Name |Attribute Type|
+|---------------|--------------|
+|id             |integer       |
+|first_name     |string        |
+|last_name      |string        |
+|username       |string        |
+|password_digest|string        |
 
 ## ADMINISTRATOR VIEW
 
