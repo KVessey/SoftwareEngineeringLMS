@@ -1,9 +1,20 @@
 class StudentsController < ApplicationController
+  before_action :authorize_student, only: [:index, :show]
+  before_action :authorize_administrator, only: [:show, :edit, :update, :destroy] 
   before_action :set_student, only: [:show, :edit, :update, :destroy]
+
+  
 
   # GET /students
   # GET /students.json
   def index
+    if current_student
+      id = current_student.id
+    elsif current_administrator
+      id = params[:id]
+    else
+      id = nil
+    end
     @students = Student.all.reorder('last_name ASC')
   end
 
@@ -64,7 +75,14 @@ class StudentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
-      @student = Student.find(params[:id])
+      if current_student
+        id = current_student.id
+      elsif current_administrator
+        id = params[:id]
+      else
+        id = nil
+      end
+      @student = Student.find(id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

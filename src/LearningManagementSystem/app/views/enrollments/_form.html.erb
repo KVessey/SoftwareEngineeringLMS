@@ -13,12 +13,20 @@
 
   <div class="field">
     <%= form.label :student_id %>
-    <%= collection_select(:enrollment, :student_id, Student.all.order(last_name: :asc, first_name: :desc), :id, :full_name) %>
+    <% if current_administrator %>
+      <%= collection_select(:enrollment, :student_id, Student.all.order(last_name: :asc, first_name: :desc), :id, :full_name) %>
+    <% elsif current_student %>
+      <%= collection_select(:enrollment, :student_id, [current_student], :id, :full_name) %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= form.label :semester %>
-    <%= form.text_field :semester %>
+    <% if current_administrator %>
+      <%= form.text_field :semester %>  
+    <% elsif current_student %>
+      <%= collection_select(:enrollment, :semester, Enrollment.select('semester').distinct, :id, :semester) %>
+    <% end %>
   </div>
 
   <div class="field">

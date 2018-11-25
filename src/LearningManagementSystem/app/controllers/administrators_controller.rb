@@ -1,4 +1,5 @@
 class AdministratorsController < ApplicationController
+  before_action :authorize_administrator, only: [:show, :edit, :update, :destroy] 
   before_action :set_administrator, only: [:show, :edit, :update, :destroy]
 
   # GET /administrators

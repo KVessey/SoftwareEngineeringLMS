@@ -1,4 +1,6 @@
 class EnrollmentsController < ApplicationController
+  before_action :authorize_student, only: [:index, :show]
+  before_action :authorize_administrator, only: [:show, :edit, :update, :destroy] 
   before_action :set_enrollment, only: [:show, :edit, :update, :destroy]
 
   # GET /enrollments
