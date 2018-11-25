@@ -6,10 +6,13 @@ These objects all have the id attribute created by rails, so keep that in mind.
 
 ### Student Object
 
-|Attribute Name|Attribute Type|
-|--------------|--------------|
-|first_name    |string        |
-|last_name     |string        |
+|Attribute Name |Attribute Type|
+|---------------|--------------|
+|id             |integer       |
+|first_name     |string        |
+|last_name      |string        |
+|username       |string        |
+|password_digest|string        |
 
 Has Many: enrollment
 
@@ -21,6 +24,7 @@ Has Many: exam Through: course
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
+|id            |integer       |
 |course_id     |integer       |
 |semester      |string        |
 |student_id    |integer       |
@@ -33,6 +37,7 @@ Belongs To: course
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
+|id            |integer       |
 |course_name   |string        |
 
 Belongs To: enrollment
@@ -45,6 +50,7 @@ Has Many: exam
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
+|id            |integer       |
 |course_id     |integer       |
 |exam_name     |string        |
 
@@ -56,6 +62,7 @@ Has Many: grade
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
+|id            |integer       |
 |exam_id       |integer       |
 |student_id    |integer       |
 |grade         |integer       |
@@ -66,6 +73,7 @@ Belongs To: exam
 
 |Attribute Name|Attribute Type|
 |--------------|--------------|
+|id            |integer       |
 |first_name    |string        |
 |last_name     |string        |
 
