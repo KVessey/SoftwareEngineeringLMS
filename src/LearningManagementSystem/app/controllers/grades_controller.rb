@@ -8,6 +8,9 @@ class GradesController < ApplicationController
   # GET /grades.json
   def index
     @grades = Grade.joins(:student, :exam).select('grades.id, grades.exam_id, exams.exam_name, grades.student_id, students.first_name, students.last_name, grades.grade')
+    if current_student 
+      @grades = @grades.where(grades: { student_id: current_student.id })
+    end
   end
 
   # GET /grades/1
