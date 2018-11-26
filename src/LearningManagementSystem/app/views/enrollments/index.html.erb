@@ -17,6 +17,7 @@
       <th>Student</th>
       <th>Semester</th>
       <th>Course Name</th>
+      <th>GPA</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -46,6 +47,9 @@
             action: 'show', 
             id: enrollment.course_id
             ) %>
+        </td>
+        <td>
+          <%= enrollment.enrollment_gpa %>
         </td>
         <% if current_administrator %>
           <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
