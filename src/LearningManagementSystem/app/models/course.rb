@@ -1,7 +1,7 @@
 class Course < ApplicationRecord
   has_many :students, :through => :enrollment
-  has_many :enrollments
-  has_many :exams
+  has_many :enrollments, :dependent => :destroy
+  has_many :exams, :dependent => :destroy
 
   validates_length_of :course_name, :within => 1..50
 
