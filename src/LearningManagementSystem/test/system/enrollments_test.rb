@@ -15,7 +15,6 @@ class EnrollmentsTest < ApplicationSystemTestCase
     click_on "New Enrollment"
 
     fill_in "Course", with: @enrollment.course_id
-    fill_in "Semester", with: @enrollment.semester
     fill_in "Student", with: @enrollment.student_id
     click_on "Create Enrollment"
 
@@ -28,7 +27,6 @@ class EnrollmentsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Course", with: @enrollment.course_id
-    fill_in "Semester", with: @enrollment.semester
     fill_in "Student", with: @enrollment.student_id
     click_on "Update Enrollment"
 

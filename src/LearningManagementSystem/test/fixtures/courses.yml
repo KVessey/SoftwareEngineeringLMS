@@ -2,6 +2,8 @@
 
 one:
   course_name: MyString
+  semester: MyString
 
 two:
   course_name: MyString
+  semester: MyString

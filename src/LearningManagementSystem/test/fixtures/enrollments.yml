@@ -2,10 +2,8 @@
 
 one:
   student_id: 1
-  semester: MyString
   course_id: 1
 
 two:
   student_id: 1
-  semester: MyString
   course_id: 1
