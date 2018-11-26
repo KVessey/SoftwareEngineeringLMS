@@ -15,12 +15,14 @@
   <tbody>
     <% @grades.each do |grade| %>
       <tr>
-        <td><%= grade.exam_name %></td>
+        <td><%= grade.exam.full_exam_name %></td>
         <td><%= "#{grade.first_name} #{grade.last_name}" %></td>
         <td><%= grade.grade %></td>
-        <td><%= link_to 'Show', grade %></td>
-        <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
-        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_administrator %>
+          <td><%= link_to 'Show', grade %></td>
+          <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
+          <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,6 @@
 
 <br>
 
-<%= link_to 'New Grade', new_grade_path %>
+<% if current_administrator %>
+  <%= link_to 'New Grade', new_grade_path %>
+<% end %>

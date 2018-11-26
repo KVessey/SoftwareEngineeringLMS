@@ -13,17 +13,18 @@
 
   <div class="field">
     <%= form.label :exam_id %>
-    <%= form.number_field :exam_id %>
+    <%= collection_select(:grade, :exam_id, Exam.all, :id, :full_exam_name) %>
+
   </div>
 
   <div class="field">
     <%= form.label :student_id %>
-    <%= form.number_field :student_id %>
+    <%= collection_select(:grade, :student_id, Student.all, :id, :full_name) %>
   </div>
 
   <div class="field">
     <%= form.label :grade %>
-    <%= form.number_field :grade %>
+    <%= form.number_field(:grade, in: 0..100) %>
   </div>
 
   <div class="actions">
