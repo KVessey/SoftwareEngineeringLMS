@@ -20,8 +20,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authorize
+    redirect_to login_path, alert: 'You must be logged in to access this page.' if current_student.nil? && current_administrator.nil?
+  end
+
   def authorize_student
-    redirect_to login_path, alert: 'You must be logged in to access this page.' if current_student.nil?
+    if current_administrator.nil?
+      redirect_to login_path, alert: 'You must be logged in to access this page.' if current_student.nil?
+    end
   end
 
   def authorize_administrator

@@ -1,6 +1,7 @@
 class ExamsController < ApplicationController
-  before_action :authorize_student, only: [:index, :show]
-  before_action :authorize_administrator, only: [:show, :edit, :update, :destroy] 
+  # before_action :authorize_student, only: [:index, :show]
+  # before_action :authorize_administrator, only: [:show, :edit, :update, :destroy] 
+  before_action :authorize, only: [:index, :show, :new, :edit, :create, :destory, :update]
   before_action :set_exam, only: [:show, :edit, :update, :destroy]
 
   # GET /exams

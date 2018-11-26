@@ -1,5 +1,5 @@
 class AdministratorsController < ApplicationController
-  before_action :authorize_administrator, only: [:show, :edit, :update, :destroy] 
+  before_action :authorize_administrator, only: [:index, :show, :new, :create, :edit, :update, :destroy] 
   before_action :set_administrator, only: [:show, :edit, :update, :destroy]
 
   # GET /administrators
@@ -70,6 +70,6 @@ class AdministratorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def administrator_params
-      params.require(:administrator).permit(:first_name, :last_name)
+      params.require(:administrator).permit(:first_name, :last_name, :username, :password, :password_confirmation)
     end
 end
