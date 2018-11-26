@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Course</th>
+      <th>Semester</th>
       <th>Exam name</th>
       <th colspan="3"></th>
     </tr>
@@ -15,6 +16,7 @@
     <% @exams.each do |exam| %>
       <tr>
         <td><%= exam.course.course_name %></td>
+        <td><%= exam.course.semester %>
         <td><%= exam.exam_name %></td>
         <% if current_administrator %>
           <td><%= link_to 'Show', exam %></td>
