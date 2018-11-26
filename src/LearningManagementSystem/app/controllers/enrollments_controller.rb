@@ -13,6 +13,10 @@ class EnrollmentsController < ApplicationController
         @enrollments = @enrollments.where(courses: { semester: params[:semester] })
       end
     end
+
+    if current_student
+      @enrollments = @enrollments.where(enrollments: { student_id: current_student.id })
+    end
   end
 
   # GET /enrollments/1
