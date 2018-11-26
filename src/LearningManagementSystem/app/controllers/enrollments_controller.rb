@@ -7,10 +7,10 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments
   # GET /enrollments.json
   def index
-    @enrollments = Enrollment.joins(:course, :student).select('enrollments.id, enrollments.semester, enrollments.course_id, courses.course_name, students.first_name, students.last_name, enrollments.student_id').reorder('last_name ASC')
+    @enrollments = Enrollment.joins(:course, :student).select('enrollments.id, enrollments.course_id, courses.course_name, courses.semester, students.first_name, students.last_name, enrollments.student_id').reorder('last_name ASC')
     if (params.has_key?(:semester))
       if (params[:semester] != 'all')
-        @enrollments = @enrollments.where(semester: params[:semester])
+        @enrollments = @enrollments.where(courses: { semester: params[:semester] })
       end
     end
   end
@@ -77,6 +77,6 @@ class EnrollmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def enrollment_params
-      params.require(:enrollment).permit(:student_id, :semester, :course_id)
+      params.require(:enrollment).permit(:student_id, :course_id)
     end
 end

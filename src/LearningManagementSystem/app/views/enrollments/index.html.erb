@@ -24,7 +24,7 @@
         <td><%= link_to(
           enrollment.semester, 
           controller: 'enrollments',
-          semester: enrollment.semester
+          semester: enrollment.course.semester
           ) %></td>
         <td><%= link_to(
           enrollment.course.course_name, 

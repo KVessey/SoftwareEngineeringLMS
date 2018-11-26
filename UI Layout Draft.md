@@ -26,7 +26,6 @@ Has Many: exam Through: course
 |--------------|--------------|
 |id            |integer       |
 |course_id     |integer       |
-|semester      |string        |
 |student_id    |integer       |
 
 Belongs To: student
@@ -39,6 +38,7 @@ Belongs To: course
 |--------------|--------------|
 |id            |integer       |
 |course_name   |string        |
+|semester      |string        |
 
 Belongs To: enrollment
 

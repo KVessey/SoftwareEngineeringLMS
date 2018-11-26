@@ -21,17 +21,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :semester %>
-    <% if current_administrator %>
-      <%= form.text_field :semester %>  
-    <% elsif current_student %>
-      <%= collection_select(:enrollment, :semester, Enrollment.select(:semester).distinct, :id, :semester) %>
-    <% end %>
-  </div>
-
-  <div class="field">
     <%= form.label :course_id %>
-    <%= collection_select(:enrollment, :course_id, Course.all, :id, :course_name) %>
+    <%= collection_select(:enrollment, :course_id, Course.all, :id, :full_course_name) %>
   </div>
 
   <div class="actions">

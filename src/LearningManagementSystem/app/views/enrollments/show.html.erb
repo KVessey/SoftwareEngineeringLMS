@@ -6,13 +6,8 @@
 </p>
 
 <p>
-  <strong>Semester:</strong>
-  <%= @enrollment.semester %>
-</p>
-
-<p>
   <strong>Course:</strong>
-  <%= @enrollment.course.course_name %>
+  <%= @enrollment.course.full_course_name %>
 </p>
 
 <%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
