@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <h1><%= link_to "Learning Management System", controller: "home" %></h1>
     <% if current_student %>
       Logged in as <%= current_student.full_name %>.
       <%= link_to "Log Out", logout_path %>

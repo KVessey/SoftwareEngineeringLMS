@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Home</h1>
+
+<% if current_administrator %>
+  <!-- Navigate to students -->
+  <div><%= link_to 'View Students', controller: 'students' %></div>
+  <!-- Navigate to enrollments -->
+  <div><%= link_to 'View Enrollments', controller: 'enrollments' %></div>
+  <!-- Navigate to courses -->
+  <div><%= link_to 'View Courses', controller: 'courses' %></div>
+  <!-- Navigate to exams -->
+  <div><%= link_to 'View Exams', controller: 'exams' %></div>
+  <!-- Navigate to grades -->
+  <div><%= link_to 'View Grades', controller: 'grades' %></div>
+  <!-- Navigate to administrators -->
+  <div><%= link_to 'View Administrators', controller: 'administrators' %></div>
+<% elsif current_student %>
+  <!-- Edit profile button -->
+  <div><%= link_to 'Edit Profile', controller: 'students', action: 'edit', id: @student_id %></div>
+  <!-- View student list -->
+  <div><%= link_to 'View Students', controller: 'students' %></div>
+  <!-- View enrollments -->
+  <div><%= link_to 'View Enrollments', controller: 'enrollments' %></div>
+  <!-- View list of courses -->
+  <div><%= link_to 'View Courses', controller: 'courses' %></div>
+  <!-- View grades -->
+  <div><%= link_to 'View Grades', controller: 'grades' %></div>
+<% end %>
