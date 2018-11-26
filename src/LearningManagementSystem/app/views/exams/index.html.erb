@@ -16,14 +16,17 @@
       <tr>
         <td><%= exam.course.course_name %></td>
         <td><%= exam.exam_name %></td>
-        <td><%= link_to 'Show', exam %></td>
-        <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
-        <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_administrator %>
+          <td><%= link_to 'Show', exam %></td>
+          <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
+          <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Exam', new_exam_path %>
+<% if current_administrator %>
+  <%= link_to 'New Exam', new_exam_path %>
+<% end %>

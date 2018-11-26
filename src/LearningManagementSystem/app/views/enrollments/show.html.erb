@@ -10,5 +10,7 @@
   <%= @enrollment.course.full_course_name %>
 </p>
 
-<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<% if current_administrator %>
+  <%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<% end %>
 <%= link_to 'Back', enrollments_path %>

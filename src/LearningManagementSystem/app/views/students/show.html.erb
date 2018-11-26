@@ -30,5 +30,7 @@
   </tbody>
 </table>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
+<% if current_administrator %>
+  <%= link_to 'Edit', edit_student_path(@student) %> |
+<% end %>
 <%= link_to 'Back', students_path %>
